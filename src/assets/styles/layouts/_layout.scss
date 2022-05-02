@@ -1,0 +1,205 @@
+/**
+ * Layout styles
+ */
+
+@use "images";
+
+/* Se define el estilo del cuerpo de la página */
+
+#body {
+  color: $light-color;
+  background-color: $principal-color;
+}
+
+/**
+ * Header styles
+ */
+
+/* Se define el estilo de la cabecera de la página */
+
+#header {
+  position: sticky;
+  top: 0;
+  z-index: 3;
+  width: 100%;
+
+  @include color;
+
+  @include background-gradient;
+}
+
+/* Se define el estilo de la cabecera para este ancho de pantalla máximo */
+
+@media only screen and (max-width: 700px) {
+
+  #header {
+    position: static;
+  }
+}
+
+/**
+ * Main styles
+ */
+
+/* Se define el estilo del elemento main del cuerpo de la página */
+
+#main {
+
+  @include center-content;
+
+  @include color($color: $light-color, $background-color: $principal-light-color);
+}
+
+/**
+ * Footer styles
+ */
+
+/* Se define el estilo del pie de página y sus elementos anidados */
+
+#footer {
+  bottom: 0;
+  width: 100%;
+
+  @include color;
+
+  @include background-gradient;
+}
+
+/**
+ * Home styles
+ */
+
+/* Se define el estilo de la portada */
+
+#home {
+
+  @extend %section-style;
+
+  @include width(80%);
+
+  padding: 30px 50px;
+}
+
+/**
+ * Bands styles
+ */
+
+/* Se define el estilo de los grupos */
+
+#bands {
+
+  @extend %section-style;
+}
+
+/* Se define el estilo de los grupos para este ancho de pantalla máximo */
+
+@media only screen and (max-width: 1150px) {
+
+  #bands {
+
+    @include width(75%);
+  }
+}
+
+/* Se define el estilo de los grupos para este ancho de pantalla máximo */
+
+@media only screen and (max-width: 700px) {
+
+  #bands {
+
+    @include width(80%);
+  }
+}
+
+/**
+ * Article styles
+ */
+
+/* Se define el estilo del artículo */
+
+#article {
+
+  @extend %section-style;
+}
+
+/* Se define el estilo del artículo para este ancho de pantalla máximo */
+
+@media only screen and (max-width: 1150px) {
+
+  #article {
+
+    @include width(75%);
+  }
+}
+
+/* Se define el estilo del artículo para este ancho de pantalla máximo */
+
+@media only screen and (max-width: 700px) {
+
+  #article {
+
+    @include width(80%);
+  }
+}
+
+/**
+ * Gallery styles
+ */
+
+/* Se define el estilo de la galería */
+
+#gallery {
+
+  @extend %section-style;
+}
+
+/* Se define el estilo de la galería para este ancho de pantalla máximo */
+
+@media only screen and (max-width: 1150px) {
+
+  #gallery {
+
+    @include width(75%);
+  }
+}
+
+/* Se define el estilo de la galería para este ancho de pantalla máximo */
+
+@media only screen and (max-width: 700px) {
+
+  #gallery {
+
+    @include width(80%);
+  }
+}
+
+/**
+ * Form styles
+ */
+
+/* Se define el estilo del formulario */
+
+#form {
+
+  @extend %section-style;
+}
+
+/* Se define el estilo del formulario para este ancho de pantalla máximo */
+
+@media only screen and (max-width: 1150px) {
+
+  #form {
+
+    @include width(75%);
+  }
+}
+
+/* Se define el estilo del formulario para este ancho de pantalla máximo */
+
+@media only screen and (max-width: 700px) {
+
+  #form {
+
+    @include width(80%);
+  }
+}

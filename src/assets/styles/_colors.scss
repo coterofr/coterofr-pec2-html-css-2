@@ -1,0 +1,27 @@
+/**
+ * Colors variables
+ */
+
+@use "sass:color";
+
+$light-color: rgb(250,250,250);
+$light-bg: $light-color;
+
+$principal-color: rgb(11,6,20);
+$principal-light-color: rgb(40,37,54);
+$principal-bg: color.scale($principal-color,$lightness: 70%);
+
+$contrast-color: #8c2fb1;
+$contrast-light-color: #a769c0;
+$contrast-dark-color: #3d0055;
+
+$red-color: rgb(230,36,36);
+
+$shadow-color: #5c5858;
+
+$gray-color: rgb(215,215,215);
+$gray-light-color: rgb(245,245,245);
+
+$dark-color: rgb(0,0,0);
+$dark-light-color: rgb(55,55,55);
+$dark-opacity-bg: rgb(0,0,0,.7);

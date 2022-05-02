@@ -1,0 +1,186 @@
+/**
+ * STATE STYLES
+ * Cambio de estado de los elementos en caso de que el usuario
+ * pase con el ratón por encima de estos, en caso de ser un elemento en
+ * primera posición, última posición o en una posición concreta dentro de un conjunto de elementos
+ */
+
+/* Se ocultan los elementos con esta clase */
+
+.is-hidden { display: none; }
+
+%view-link-action:hover { color: $contrast-color; }
+
+%view-section-action:hover {
+  color: $contrast-color;
+  text-decoration: underline;
+}
+
+a:hover {
+  font-weight: bold;
+  color: $contrast-color;
+  border-bottom: 2px solid $contrast-color;
+}
+
+img:hover {
+
+  @include shadow;
+}
+
+/**
+ * Header styles
+ */
+
+.header-nav-list {
+
+  a:hover {
+    font-weight: bold;
+    border-bottom: none;
+  }
+}
+
+/**
+ * Footer styles
+ */
+
+.footer-nav-list {
+
+  a:hover {
+    font-weight: 500;
+    border-bottom: none;
+  }
+}
+
+.social-media-list {
+
+  a:hover {
+    font-weight: normal;
+    border-bottom: none;
+  }
+
+  img:hover {
+    background-color: $contrast-color;
+    border-radius: 50px;
+    opacity: .9;
+  }
+}
+
+.policy-nav-list {
+
+  a:hover {
+    font-weight: normal;
+    border-bottom: none;
+  }
+}
+
+/**
+ * Home styles
+ */
+
+#home:hover {
+
+  @extend %shadow-hover;
+}
+
+.home-link:hover {
+  border-bottom: none;
+}
+
+.home-img:hover {
+  opacity: 1;
+}
+
+/**
+ * Bands styles
+ */
+
+#bands:hover {
+
+  @extend %shadow-hover;
+}
+
+.band:hover {
+
+  @include shadow;
+
+  @include background-gradient($color2: $contrast-light-color);
+}
+
+.band-img:hover {
+
+  @include shadow;
+  opacity: 1;
+}
+
+.button-detail:hover {
+
+  @include background-gradient($color1: $contrast-color,$color2: $contrast-light-color);
+
+  color: $light-color;
+  border-color: $light-color;
+}
+
+/**
+ * Article styles
+ */
+
+#article:hover {
+
+  @extend %shadow-hover;
+}
+
+.read-more-detail:hover,
+.read-less-detail:hover,
+.read-more-info:hover,
+.read-less-info:hover {
+  color: $contrast-color;
+}
+
+.article-list-artists-item:hover,
+.article-list-bands-item:hover,
+.article-list-stages-item:hover,
+.article-list-bars-item:hover {
+
+  @include shadow;
+
+  @include background-gradient($color2: $contrast-light-color);
+
+  cursor: pointer;
+}
+
+.view-more-artists:hover,
+.view-less-artists:hover,
+.view-more-bands:hover,
+.view-less-bands:hover {
+  color: $contrast-color;
+}
+
+.link-item:hover {
+  margin-right: -10px;
+  margin-left: 10px;
+}
+
+/**
+ * Gallery styles
+ */
+
+#gallery:hover {
+
+  @extend %shadow-hover;
+}
+
+.gallery-img:hover {
+
+  @include shadow;
+  cursor: pointer;
+  opacity: 1;
+}
+
+/**
+ * Form styles
+ */
+
+#form:hover {
+
+  @extend %shadow-hover;
+}

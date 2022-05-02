@@ -1,0 +1,100 @@
+/**
+ * Base styles
+ */
+
+/* Se define el tamaño de fuente genérico */
+
+html { font-size: $font-size; }
+
+/* Se define el tipo de fuente genérico */
+
+* { font-family: $font-family-app; }
+
+/* Se define el ancho y margen del cuerpo de la página */
+
+body {
+  width: 100%;
+  margin: $margin-center;
+}
+
+/* Se define el margen y color de fondo de las secciones */
+
+section {
+
+  @include margin-top-bottom($margin-top: 30px, $margin-bottom: 30px);
+  background-color: $principal-light-color;
+}
+
+/* Se define el estilo de los links genéricos */
+
+a {
+  font-size: 1rem;
+  color: $light-color;
+  text-decoration: none;
+}
+
+/* Se define el estilo de los títulos de primer nivel */
+
+h1 {
+  margin-bottom: 20px;
+  font-size: 2rem;
+}
+
+/* Se define el estilo de los títulos de segundo nivel y los links de estos */
+
+h2 {
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+}
+
+h2 a {
+  font-size: 1.5rem;
+}
+
+/* Se define el estilo de los títulos de tercer nivel */
+
+h3 {
+  font-size: 1.2rem;
+}
+
+/* Se define el estilo de los párrafos */
+
+p {
+  font-size: 1rem;
+  text-align: justify;
+}
+
+/* Se define el estilo de las citas en bloque */
+
+blockquote {
+  padding-left: 15px;
+  font-style: italic;
+  text-align: justify;
+}
+
+/* Se define el estilo de las listas no ordenadas */
+
+ul {
+  padding-left: 0;
+  margin: 0;
+  font-size: 1rem;
+  list-style-type: none;
+}
+
+/* Se define el estilo de los títulos de las imágenes */
+
+figcaption {
+  font-size: .9rem;
+  color: $gray-color;
+}
+
+/* Se define el estilo de las secciones de los formularios */
+
+fieldset {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+small {
+  color: $gray-color;
+}

@@ -1,0 +1,286 @@
+<!-- Main -->
+<main id="main">
+  <section id="form">
+    <h1>
+      <i class="fa fa-ticket icon" aria-hidden="true"></i>
+      <span>Entradas VIP</span>
+    </h1>
+
+    <!-- Form -->
+    <form class="container" method="GET" action="./form.html">
+
+      <div class="alert alert-warning" role="alert">
+        <i class="fa-solid fa-triangle-exclamation" aria-hidden="true"></i>
+        <span>El <span class="bold">72%</span> de las entradas del <span class="bold">Festival de música Santiago de Compostela 2022</span> están agotadas.</span>
+      </div>
+      <div class="progress">
+        <div class="progress-bar bg-warning w-75" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+      </div>
+      
+      <fieldset>
+        <legend>
+          <i class="fa fa-id-card icon" aria-hidden="true"></i>
+          <span>Datos personales</span>
+        </legend>
+
+        <div class="row mb-2">
+          <div class="form-group col-md-6">
+            <label for="nombre" class="required">Nombre</label>
+            <input type="text" class="form-control" id="nombre" name="nombre" minlength="2" maxlength="64" pattern="[A-Za-z'-]{2,64}" placeholder="Nombre" required>
+          </div>
+
+          <div class="form-group col-md-6">
+            <label for="apellidos" class="required">Apellidos</label>
+            <input type="text" class="form-control" id="apellidos" name="apellidos" minlength="2" maxlength="128" pattern="[A-Za-z'- ]{2,128}" placeholder="Apellidos" required>
+          </div>
+        </div>
+
+        <div class="form-group mb-2">
+          <label for="correo" class="required">Correo electrónico</label>
+          <input type="email" class="form-control" id="correo" name="correo" minlength="2" maxlength="64" placeholder="Correo electrónico" required>
+          <small id="emailHelp" class="form-text text-info">
+            <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
+            <span>No compartiremos su correo electrónico con nadie más.</span>
+          </small>
+        </div>
+
+        <div class="row mb-2">
+          <div class="form-group col-md-6">
+            <label for="dni" class="required">DNI</label>
+            <input type="text" class="form-control" id="dni" name="dni" minlength="9" maxlength="9" pattern="[0-9A-Za-z]{9}" placeholder="DNI" required>
+            <small id="dniHelp" class="form-text text-info">
+              <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
+              <span>No compartiremos su DNI con nadie más.</span>
+            </small>
+          </div>
+
+          <div class="form-group col-md-6">
+            <label for="fecha">Fecha de nacimiento</label>
+            <input type="date" class="form-control" id="fecha" name="fecha">
+          </div>
+        </div>
+      </fieldset>
+
+      <hr>
+
+      <fieldset>
+        <legend>
+          <i class="fas fa-address-card icon" aria-hidden="true"></i>
+          <span>Dirección</span>
+        </legend>
+
+        <div class="alert alert-primary" role="alert">
+          <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
+          <span>No compartiremos su dirección con nadie más.</span>
+        </div>
+
+        <div class="form-group mt-2 mb-2">
+          <label for="calle" class="required">Calle y número</label>
+          <input type="text" class="form-control" id="calle" name="calle" placeholder="Calle y número" required>
+        </div>
+
+        <div class="row mb-2">
+          <div class="form-group col-md-6">
+            <label for="ciudad" class="required">Ciudad</label>
+            <input type="text" class="form-control" id="ciudad" name="ciudad" placeholder="Ciudad" required>
+          </div>
+  
+          <div class="form-group col-md-6">
+            <label for="provincia" class="required">Provincia</label>
+            <input type="text" class="form-control" id="provincia" name="provincia" placeholder="Provincia" required>
+          </div>
+        </div>
+
+        <div class="row mb-2">
+          <div class="form-group col-md-6">
+            <label for="codigo" class="required">Código postal</label>
+            <input type="number" class="form-control" id="codigo" name="codigo" min="1" max="99999" placeholder="Código postal" required>
+          </div>
+  
+          <div class="form-group col-md-6">
+            <label for="pais">País</label>
+            <select class="form-control" name="pais" id="pais" required>
+              <option value="default">Seleccionar</option>
+              <option value="andorra">Andorra</option>
+              <option value="españa">España</option>
+              <option value="francia">Francia</option>
+              <option value="francia">Inglaterra</option>
+              <option value="francia">Italia</option>
+              <option value="other">Otro</option>
+            </select>
+          </div>
+        </div>
+      </fieldset>
+
+      <hr>
+
+      <fieldset>
+        <legend>
+          <i class="fa-solid fa-credit-card icon" aria-hidden="true"></i>
+          <span>Datos de pago entrada VIP</span>
+        </legend>
+
+        <div id="pago">
+          <p class="title">Método de pago</p>
+
+          <div class="form-group form-check-inline mb-2">
+            <input type="radio" class="form-check-input" id="transferencia" name="pago" value="transferencia" checked>
+            <label class="form-check-label" for="transferencia">Transferencia</label>
+          </div>
+
+          <div class="form-group form-check-inline mb-2">
+            <input type="radio" class="form-check-input" id="tarjeta" name="pago" value="tarjeta">
+            <label class="form-check-label" for="tarjeta">Tarjeta de crédito</label>
+          </div>
+
+          <div class="form-group form-check-inline mb-2">
+            <input type="radio" class="form-check-input" id="paypal" name="pago" value="paypal">
+            <label class="form-check-label" for="paypal">Paypal</label>
+          </div>
+        </div>
+
+        <div class="form-group col-md-6 mb-2">
+          <label for="talla">Tipo VIP</label>
+          <select class="form-control small" name="talla" id="talla">
+            <option value="default">Seleccionar</option>
+            <option value="10">Estándar 15 €</option>
+            <option value="30">30 €</option>
+            <option value="40">40 €</option>
+            <option value="50">50 €</option>
+          </select>
+        </div>
+
+        <div class="row">
+          <div class="col-12 col-lg-4 col-xxl-4 mt-5">
+            <div class="card bg-dark">
+              <img src="./assets/images/festival_3.jpg" class="card-img-top" alt="Entrada VIP 3">
+              <div class="card-body">
+                <h5 class="card-title mb-3">Entrada VIP tipo 1</h5>
+                <p class="card-text">Entrada VIP de tipo 1 que permite acceder al tercer principal escenario sin restricciones.</p>
+              </div>
+              <ul class="list-group list-group-flush bg-light">
+                <li class="list-group-item bg-dark text-white">Escensario 3</li>
+              </ul>
+              <div class="card-body text-end">
+                <a href="#" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#modalEntrada1">
+                  <span data-bs-toggle="tooltip" data-bs-placement="top" title="Ver la entrada VIP tipo 1">Ver detalle</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-lg-4 col-xxl-4 mt-5">
+            <div class="card bg-dark">
+              <img src="./assets/images/festival_2.jpg" class="card-img-top" alt="Entrada VIP 4">
+              <div class="card-body">
+                <h5 class="card-title mb-3">Entrada VIP tipo 2</h5>
+                <p class="card-text">Entrada VIP de tipo 2 que permite acceder al segundo y tercer principal escenario sin restricciones.</p>
+              </div>
+              <ul class="list-group list-group-flush bg-light">
+                <li class="list-group-item bg-dark text-white">Escensario 2</li>
+                <li class="list-group-item bg-dark text-white">Escensario 3</li>
+              </ul>
+              <div class="card-body text-end">
+                <a href="#" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#modalEntrada2">
+                  <span data-bs-toggle="tooltip" data-bs-placement="top" title="Ver la entrada VIP tipo 2">Ver detalle</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-lg-4 col-xxl-4 mt-5">
+            <div class="card bg-dark">
+              <img src="./assets/images/festival_1.jpg" class="card-img-top" alt="Entrada VIP 5">
+              <div class="card-body">
+                <h5 class="card-title mb-3">Entrada VIP tipo 3</h5>
+                <p class="card-text">Entrada VIP de tipo 3 que permite acceder a los 3 principales escenarios sin restricciones.</p>
+              </div>
+              <ul class="list-group list-group-flush bg-light">
+                <li class="list-group-item bg-dark text-white">Escensario 1</li>
+                <li class="list-group-item bg-dark text-white">Escensario 2</li>
+                <li class="list-group-item bg-dark text-white">Escensario 3</li>
+              </ul>
+              <div class="card-body text-end">
+                <a href="#" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#modalEntrada3">
+                  <span data-bs-toggle="tooltip" data-bs-placement="top" title="Ver la entrada VIP tipo 3">Ver detalle</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </fieldset>
+
+      <div class="form-bottom">
+        <p id="required"><span class="color-red">*</span> Todos los campos marcados son obligatorios</p>
+
+        <div class="politica form-group mb-2">
+          <input type="checkbox" class="form-check-input" id="politica" name="politica" value="politica" required
+                 data-bs-toggle="tooltip" data-bs-placement="top" title="Aceptar la política de privacidad">
+          <label class="form-check-label" for="politica">He leído y acepto la política de privacidad y las condiciones de uso</label>
+        </div>
+
+        <div class="clearfix">
+          <button type="submit" class="btn btn-success float-end mt-2 mb-2 position-relative" data-bs-toggle="tooltip" data-bs-placement="top" title="Comprar las entradas seleccionadas">
+            <i class="fas fa-shopping-cart" aria-hidden="true"></i>
+            <span>Enviar</span>
+            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+              <span>5+</span>
+              <span class="visually-hidden">Elementos en el carrito</span>
+            </span>
+          </button>
+        </div>
+      </div>
+    </form>
+
+    <div class="modal fade" id="modalEntrada1" tabindex="-1" aria-labelledby="modalEntrada1" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content bg-dark">
+          <div class="modal-header">
+            <h5 class="modal-title" id="modalEntrada1">Entrada VIP tipo 1</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <p>Entrada VIP de tipo 1 que permite acceder al tercer principal escenario sin restricciones por el precio de 30 €.</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-warning" data-bs-dismiss="modal" data-bs-toggle="tooltip" data-bs-placement="top" title="Cerrar">Cerrar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="modalEntrada2" tabindex="-1" aria-labelledby="modalEntrada1" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content bg-dark">
+          <div class="modal-header">
+            <h5 class="modal-title" id="modalEntrada1">Entrada VIP tipo 2</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <p>Entrada VIP de tipo 2 que permite acceder al segundo y tercer principal escenario sin restricciones por el precio de 40 €.</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-warning" data-bs-dismiss="modal" data-bs-toggle="tooltip" data-bs-placement="top" title="Cerrar">Cerrar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="modalEntrada3" tabindex="-1" aria-labelledby="modalEntrada1" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content bg-dark">
+          <div class="modal-header">
+            <h5 class="modal-title" id="modalEntrada1">Entrada VIP tipo 3</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <p>Entrada VIP de tipo 3 que permite acceder a los 3 principales escenarios sin restricciones por el precio de 50 €.</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-warning" data-bs-dismiss="modal" data-bs-toggle="tooltip" data-bs-placement="top" title="Cerrar">Cerrar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
