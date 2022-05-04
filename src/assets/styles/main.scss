@@ -48,5 +48,23 @@
 @import "layouts/theme";
 
 /**
+ * Bootstrap button variants
+ */
+
+@each $color, $value in $extra-colors {
+  .btn-#{$color} {
+
+    @include button-variant($value, $value);
+  }
+}
+
+@each $color, $value in $extra-colors {
+  .btn-outline-#{$color} {
+
+    @include button-outline-variant($value);
+  }
+}
+
+/**
  * Do NOT include anything else in this file!
  */

@@ -20,6 +20,35 @@ $margin-center: 0 auto;
  * Bootstrap variables
  */
 
+// Alert variables
+$alert-padding-y: 10px;
+
+// Button variables
+$extra-color: $contrast-light-color;
+
+$extra-colors: (
+  "extra": $extra-color,
+);
+
+// Badge variables
+$badge-font-size: .9rem;
+$badge-font-weight: 600;
+
+// Card variables
+$card-spacer-y: 15px;
+$card-spacer-x: 15px;
+$card-border-width: 2px;
+$card-border-color: $gray-color;
+$card-box-shadow: 5px 5px 5px $shadow-color;
+
+// Modal variables
+$modal-lg: 700px;
+
+// List group variables
+$list-group-border-color: $gray-color;
+$list-group-border-width: 2px;
+$list-group-item-padding-y: 10px;
+
 /* $theme-colors: (
   "app": #0a33cd
 ); */

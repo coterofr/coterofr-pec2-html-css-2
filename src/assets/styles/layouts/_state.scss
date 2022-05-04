@@ -9,13 +9,6 @@
 
 .is-hidden { display: none; }
 
-%view-link-action:hover { color: $contrast-color; }
-
-%view-section-action:hover {
-  color: $contrast-color;
-  text-decoration: underline;
-}
-
 a:hover {
   font-weight: bold;
   color: $contrast-color;
@@ -39,6 +32,24 @@ img:hover {
   }
 }
 
+.header-nav-list-item:nth-of-type(1),
+.header-nav-list-item:nth-of-type(2),
+.header-nav-list-item:nth-of-type(3),
+.header-nav-list-item:nth-of-type(4) {
+  padding-right: 20px;
+}
+
+@media only screen and (max-width: 700px) {
+
+  .header-nav-list-item:nth-of-type(1),
+  .header-nav-list-item:nth-of-type(2),
+  .header-nav-list-item:nth-of-type(3),
+  .header-nav-list-item:nth-of-type(4) {
+    padding-right: 0;
+    padding-bottom: 3px;
+  }
+}
+
 /**
  * Footer styles
  */
@@ -48,6 +59,24 @@ img:hover {
   a:hover {
     font-weight: 500;
     border-bottom: none;
+  }
+}
+
+.footer-nav-list-item:nth-of-type(1),
+.footer-nav-list-item:nth-of-type(2),
+.footer-nav-list-item:nth-of-type(3),
+.footer-nav-list-item:nth-of-type(4) {
+  padding-right: 20px;
+}
+
+@media only screen and (max-width: 700px) {
+
+  .footer-nav-list-item:nth-of-type(1),
+  .footer-nav-list-item:nth-of-type(2),
+  .footer-nav-list-item:nth-of-type(3),
+  .footer-nav-list-item:nth-of-type(4) {
+    padding-right: 0;
+    padding-bottom: 3px;
   }
 }
 
@@ -70,6 +99,40 @@ img:hover {
   a:hover {
     font-weight: normal;
     border-bottom: none;
+  }
+}
+
+.policy-nav-list-item:nth-of-type(1),
+.policy-nav-list-item:nth-of-type(2),
+.policy-nav-list-item:nth-of-type(3) {
+  padding-right: 8px;
+}
+
+@media only screen and (max-width: 700px) {
+
+  .policy-nav-list-item:nth-of-type(1),
+  .policy-nav-list-item:nth-of-type(2),
+  .policy-nav-list-item:nth-of-type(3) {
+    padding-right: 0;
+    padding-bottom: 3px;
+  }
+}
+
+.policy-nav-list-item:nth-of-type(2)::before,
+.policy-nav-list-item:nth-of-type(3)::before,
+.policy-nav-list-item:nth-of-type(4)::before {
+  padding-right: 8px;
+  color: $light-color;
+  content: "•";
+}
+
+@media only screen and (max-width: 700px) {
+
+  .policy-nav-list-item:nth-of-type(2)::before,
+  .policy-nav-list-item:nth-of-type(3)::before,
+  .policy-nav-list-item:nth-of-type(4)::before {
+    padding-right: 0;
+    content: "";
   }
 }
 
